@@ -21,4 +21,4 @@
             <li><a href="/inscription" title="Inscription">Inscription</a></li>
         </ul>
     </nav>
-<main>
+    <main>
