@@ -23,7 +23,7 @@ class users extends database
         $request->bindValue(':password', $this->password, PDO::PARAM_STR);
         return $request->execute();
     }
-
+    
     /**
      * Fonction qui permet de vérifier qu'un utilisateur existe dans la base de données selon une colonne
      * @param string $column Le nom de la colonne (mail, username, lastname, etc..)

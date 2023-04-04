@@ -2,8 +2,6 @@
     <h1>Inscription</h1>
     <form action="/inscription" method="post">
 
-
-
         <fieldset>
             <legend>Informations de connexion</legend>
 
@@ -49,7 +47,7 @@
         </fieldset>
 
         <div class="buttonsBox">
-            <input type="submit" value="Inscription">
+            <input type="submit" name="send" value="Inscription">
             <button id="cancel"><a href="/accueil">Annuler</a></button>
         </div>
     </form>

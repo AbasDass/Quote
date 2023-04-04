@@ -5,6 +5,7 @@ require_once '../config.php';
 
 $formErrors = [];
 
+
 if (count($_POST) > 0) {
     $user = new users;
     
@@ -20,6 +21,7 @@ if (count($_POST) > 0) {
     } else {
         $formErrors['username'] = '';
     }
+
 
     if (!empty($_POST['birthdate'])) {
         if (preg_match($regex['birthdate'], $_POST['birthdate'])) {
@@ -71,6 +73,7 @@ if (count($_POST) > 0) {
 
     if (count($formErrors) == 0) {
         $user->addUser();
+        header('location:/');
     }
 }
 

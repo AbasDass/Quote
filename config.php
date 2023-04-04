@@ -4,7 +4,10 @@ $regex = [
     'username' => '/^[A-Za-z0-9\-_]{3,20}$/',
     'password' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/',
     'birthdate' => '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/',
+    'content' => '/(<script>)/',
 ];
+
+define('GENERAL_ERROR', 'Une erreur est survenue, veuillez réessayer. Si le problème persiste, merci de <a href="kiwe-jay-12@hotmail.fr">nous contacter</a>.');
 
 define('USER_LASTNAME_ERROR_EMPTY', 'Le nom de famille est obligatoire.');
 define('USER_LASTNAME_ERROR_INVALID', 'Le nom de famille ne peut comporter que des lettres en majuscule et minuscule, des tirets ou des espaces. Il ne peut contenir que 20 caractères.');
@@ -27,3 +30,7 @@ define('USER_PASSWORDCONFIRM_ERROR_NOTSAME', 'Veuillez entrer le même mot de pa
 // define('PASSWORD_DEFAULT', 'Le mot de passe comporte un défaut.');
 
 define('USER_SECONDPASSWORDCONFIM_ERROR', 'non identique');
+
+
+define('COMMENT_ERROR_EMPTY', 'Le texte est obligatoire.');
+define('COMMENT_ERROR_INVALID', 'L\'utilisation de la balise script est inerdite.');

@@ -1,24 +1,3 @@
-<?php require_once './views/parts/header.php'?>
-<?php require_once './controllers/quotesController.php'?>
-<header class="introQuote">
-    <div class="title">
-        <h1>Bienvenue sur Quote</h1>
-    </div>
-    <div class="firstTitle">
-        <h2>Lisez et Créez vos citations</h2>
-    </div>
-    <div class="secondTitle">
-        <h3>Quote est un site basé sur la lecture et écriture de citations, répertoriée par catégories et auteur</h3>
-    </div>
-    <div class="btn-quote">
-        <div class="btn-create">
-            <a href="#">Créer une citation</a>
-        </div>
-        <div class="btn-read">
-            <a href="#">Lire des citations</a>
-        </div>
-    </div>
-</header>
 <main class="quoteMain">
     <?php
     foreach ($quotes as $quote) { ?>
@@ -62,4 +41,3 @@
     }
     ?>
 </main>
-<?php require_once 'views/parts/footer.php'?>

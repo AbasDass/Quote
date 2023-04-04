@@ -1,13 +1,13 @@
 <?php
+session_start();
+if (isset($_SESSION['user'])) {
+    header('Location: /');
+    exit;
+}
 require_once '../models/database.php';
 require_once '../models/usersModel.php';
 require_once '../config.php';
 
-session_start();
-if (isset($_SESSION['user'])) {
-    header('Location: /accueil');
-    exit;
-}
 
 $formErrors = [];
 
@@ -29,7 +29,7 @@ if (count($_POST) > 0) {
         if (isset($password)) {
             if (password_verify($_POST['password'], $password)) {
                 $_SESSION['user'] = $user->getIds();
-                header('Location: /accueil');
+                header('Location: /');
                 exit;
             } else {
                 $formErrors['password'] = USER_LOGIN_ERROR;
