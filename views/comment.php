@@ -1,7 +1,7 @@
-<main class="quoteMain">
+<main class="quoteMain2">
     <?php
     foreach ($quotes as $quote) { ?>
-        <div class="quoteCard" style="background-image: url(assets/img/<?= $quote->nI; ?>);">
+        <div class="quoteCard2" style="background-image: url(assets/img/<?= $quote->nI; ?>);">
             <blockquote>
                 <p> <?= $quote->content ?></p>
                 <cite> <?= $quote->nA ?> </cite>
@@ -20,13 +20,13 @@
                                     <input type="text" class="form-control" id="username" name="username">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="msgComment" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="msgComment" name="msgComment"><?= isset($_POST['btncomment']) && isset($formErrors['msgComment']) ? $_POST['comment'] : '' ?></textarea>
-                                    <?php if (isset($formErrors['msgComment'])) { ?>
-                                        <p><?= $formErrors['msgComment'] ?></p>
+                                    <label for="content" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="content" name="content"></textarea>
+                                    <?php if (isset($formErrors['comment'])) { ?>
+                                        <p><?= $formErrors['comment'] ?></p>
                                     <?php } ?>
                                 </div>
-                                <button type="submit" class="btn btn-primary" name="btnComment">Envoyer mon commentaire</button>
+                                <button type="submit" class="btn btn-primary" name="msgComment">Envoyer mon commentaire</button>
                             </form>
                         </div>
                         <div class="modal-footer">

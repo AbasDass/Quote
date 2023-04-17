@@ -18,6 +18,28 @@ if(!isset($_SESSION)){
             <li><a href="/accueil" class="titleStyle" title="Accueil">Quote</a></li>
         </ul>
         <ul>
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <style type='text/css'> .creer {display: none;} </style>
+            <?php
+            }
+            ?>
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <style type='text/css'> .modifiers {display: none;} </style>
+            <?php
+            }
+            ?>
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <style type='text/css'> .citations {display: none;} </style>
+            <?php
+            }
+            ?>
+
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <style type='text/css'> .commentaires {display: none;} </style>
+            <?php
+            }
+            ?>    
+
             <?php if (isset($_SESSION['user'])) { ?>
                 <style type='text/css'> .connexion {display: none;} </style>
             <?php
@@ -36,6 +58,8 @@ if(!isset($_SESSION)){
             }
             ?>
             <li class="citations"><a href="/quotes" title="Citation">Citations</a></li>
+            <li class="creer"><a href="/creation" title="Citation">Créer</a></li>
+            <li class="modifiers"><a href="/modifier" title="Modifier">Modifier</a></li>
             <li class="commentaires"><a href="/comments" title="Publication">Commentaires</a></li>
             <li class="connexion"><a href="/connexion"  title="Connexion">Connexion</a></li>
             <li class="deconnexion"><a href="/deconnexion" title="deconnexion"><img src="/assets/img/icons8-se-déconnecter-48 (1).png" alt="logo de déconnexion"></a></li>

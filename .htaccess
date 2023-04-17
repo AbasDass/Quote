@@ -5,4 +5,7 @@ RewriteRule ^connexion$ controllers/loginController.php
 RewriteRule ^quotes$ controllers/quotesController.php
 RewriteRule ^comments$ controllers/commentController.php
 RewriteRule ^deconnexion$ controllers/logoutController.php
+RewriteRule ^creation$ controllers/quotesController.php
+RewriteRule ^modifier$ controllers/updateQuotesController.php
+
 

@@ -3,6 +3,7 @@
   font-family: Poppins, sans-serif;
   margin: 0px;
   padding: 0px;
+  background-color: #161616;
 }
 
 body main {
@@ -15,7 +16,6 @@ body main {
 }
 
 
-
 body main section h1 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -23,11 +23,12 @@ body main section h1 {
 
  #registerView fieldset {
   border: none;
+  width: 60%;
+  padding-left: 60px;
 }
 #registerView fieldset legend {
   font-weight: bold;
-  color: #919090;
-  margin-left: 25px;
+  color: #d1d1d1;
 }
 #registerView fieldset div {
   display: flex;
@@ -153,6 +154,11 @@ nav ul li a {
   padding-top: 40px;
 }
 
+.connection {
+  color: #e4e6e4;
+  font-size: 30px;
+}
+
 .formLogin input {
   width: 300px;
   height: 50px;
@@ -186,6 +192,7 @@ form input .btn-submit{
 
 .errorColor {
   color: red;
+  font-size: 80%;
 }
 
 
@@ -241,25 +248,53 @@ form input .btn-submit{
   border-radius: 5px;
   padding: 10px 32px;
 }
+.btn-quote2 a {
+  text-decoration: none;
+  border: 2px solid #f7f6f6;
+  border-radius: 5px;
+  padding: 10px 32px;
+}
 
 
 /* QUOTE SECTION */
 
 
 .quoteMain {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  height: auto;
+  width: 100%;
+}
+
+.quoteMain2 {
+  display: flex;
+  flex-direction: column;
   background-color: #202020;
   height: auto;
   width: 100%;
 }
 
 .quoteCard {
-  display: flex;
-  justify-content: center;
-  height: 700px;
-  width: 100%;
+  height: 300px;
+  width: 900px;
+  background-position: 50%;
   margin-bottom: 15px;
   margin-top: 5px;
+  margin:20px;
+  border-radius: 10px;
+  border-style: double;
 }
+
+.quoteCard2 {
+  height: 300px;
+  width: 40%;
+  background-position: 50%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  margin:20px
+}
+
 
 blockquote {
   color: rgba(250, 200, 130, 0.6);
@@ -273,13 +308,19 @@ blockquote {
 blockquote p {
   font-style: italic;
   margin-bottom: 0;
+  padding-top: 15px;
+  font-size: 2rem;
+}
+
+.lienCitation {
+  text-decoration: none;
 }
 
 blockquote p::before,
 blockquote p::after {
   content: "“";
   font-family: Georgia;
-  font-size: 8rem;
+  font-size: 6rem;
   margin: -2rem 0 0 -4rem;
   position: absolute;
   opacity: 0.5;
@@ -291,7 +332,8 @@ blockquote p::after {
 }
 
 blockquote cite {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
+  color:#f8950a;
 }
 
 .imgQuote {
@@ -303,7 +345,7 @@ blockquote cite {
 /* MODAL CONTENT  */
 
 .modal-content {
-  background-color: #473926;
+  background-color: #568baa;
 }
 
 .modal-header {
@@ -322,19 +364,68 @@ blockquote cite {
   height: 90px;
   width: 190px;
   border-radius: 5px;
-  margin-right: 999px;
-  margin-top: 540px;
   background: none;
 }
+.btn-send2 {
+  height: 90px;
+  width: 190px;
+  border-radius: 5px;
+  background: none;
 
-footer .footerContaine {
-  height: 50px;
-  background-color: #000;
+}
+
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000000;
+  text-align: center;
+  height: 60px;
 }
 
 
+/* Media section  */
 
+@media (max-width: 768px) {
+  #registerView fieldset {
+    width: 80%;
+  }
+  
+  main section #registerView {
+    width: 80%;
+    padding: 2rem;
+  }
+}
 
+@media (max-width: 480px) {
+  #registerView fieldset {
+    width: 100%;
+  }
+  
+  #registerView fieldset div {
+    margin: 0.2rem;
+  }
+  
+  #registerView .buttonsBox {
+    flex-direction: column;
+  }
+  
+  #registerView .buttonsBox input[type=submit] {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  #registerView .buttonsBox #cancel {
+    margin-bottom: 0.5rem;
+  }
+  
+  main section #registerView {
+    width: 90%;
+    padding: 1rem;
+  }
+}
 
 
 

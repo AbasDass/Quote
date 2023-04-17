@@ -3,7 +3,6 @@
     <form action="/inscription" method="post">
 
         <fieldset>
-            <legend>Informations de connexion</legend>
 
             <div>
                 <label class="nameFont" for="username">Pseudo</label>

@@ -1,26 +1,16 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) {
-    header('Location: /connexion');
-    exit;
-}
 require_once '../models/database.php';
 require_once '../models/quotesModel.php';
 require_once '../models/categoriesModel.php';
 require_once '../config.php';
 
-// instance all models 
+// instance des citations 
+$quotesInstance = new quotes;
 $categoriesInstance = new quotesCategories;
 
-$quotesInstance = new quotes;
 
-// select all method of any models 
-$quotes = $quotesInstance->selectQuote();
 $postCategoriesList = $categoriesInstance->selectCategories();
-
-
-// conditions for all 
-
 if (count($_POST) > 0) {
     try {
     $quotesInstance = new quotes;
@@ -68,7 +58,7 @@ if (count($_POST) > 0) {
         if (move_uploaded_file($_FILES['image']['tmp_name'], '../' . $path)) {
             $quotesInstance->image = $path;
             $quotesInstance->id_m2r64_users = $_SESSION['user']['id'];
-            $quotesInstance->insertQuote();
+            $quotesInstance->updateQuote();
             $form = [
                 'status' => 'success',
                 'message' => POST_ADD_SUCCESS
@@ -88,6 +78,5 @@ if (count($_POST) > 0) {
 }
 
 require_once '../views/parts/header.php';
-require_once '../views/quote.php';
-require_once '../index.php';
+require_once '../views/editQuotes.php';
 require_once '../views/parts/footer.php';

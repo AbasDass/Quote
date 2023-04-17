@@ -19,10 +19,10 @@ if (count($_POST) > 0) {
         if ($user->checkIfUserExists('username') > 0) {
             $password = $user->getPassword();
         } else {
-            $formErrors['lastname'] = USER_LOGIN_ERROR;
+            $formErrors['username'] = USER_LOGIN_ERROR;
         }
     } else {
-        $formErrors['lastname'] = USER_USERNAME_ERROR_EMPTY;
+        $formErrors['username'] = USER_USERNAME_ERROR_EMPTY;
     }
 
     if (!empty($_POST['password'])) {
@@ -32,11 +32,11 @@ if (count($_POST) > 0) {
                 header('Location: /');
                 exit;
             } else {
-                $formErrors['password'] = USER_LOGIN_ERROR;
+                $formErrors['password'] = $formErrors['username'] = USER_LOGIN_ERROR;
             }
         }
     } else {
-        $formErrors['password'] = '';
+        $formErrors['password'] = USER_PASSWORD_ERROR_EMPTY;
     }
 }
 
